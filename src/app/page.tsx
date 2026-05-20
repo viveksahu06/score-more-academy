@@ -110,23 +110,6 @@ export default function HomePage() {
                   Call: 076224 22098
                 </a>
               </motion.div>
-
-              {/* Stats strip */}
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2, duration: 0.8 }} className="grid grid-cols-4 border-t border-ink/20 pt-5">
-                {[
-                  { val: 150, suffix: '+', label: 'Students' },
-                  { val: 91, suffix: '%', label: 'Avg Score' },
-                  { val: 8, suffix: '+', label: 'Years' },
-                  { val: 4, suffix: '', label: 'Batches' },
-                ].map((s) => (
-                  <div key={s.label} className="flex flex-col gap-1 pr-4 border-r border-ink/10 last:border-r-0">
-                    <strong style={{ fontFamily: 'var(--display)', fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: 400, lineHeight: 1, color: 'var(--ink)' }}>
-                      <AnimatedCounter target={s.val} suffix={s.suffix} />
-                    </strong>
-                    <span className="text-ink-3 text-[10px] tracking-[0.18em] uppercase" style={{ fontFamily: 'var(--mono)' }}>{s.label}</span>
-                  </div>
-                ))}
-              </motion.div>
             </div>
 
             {/* Right — Poster Card (editorial style tilted card) */}
