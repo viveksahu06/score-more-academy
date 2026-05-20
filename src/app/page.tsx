@@ -64,7 +64,7 @@ export default function HomePage() {
   return (
     <>
       {/* ===== HERO ===== */}
-      <section className="relative min-h-[85vh] border-b-[3px] border-ink overflow-hidden">
+      <section className="relative min-h-[85vh] border-b-[3px] border-ink">
         {/* BG radials */}
         <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 60% 50% at 85% 15%, rgba(224,101,30,0.12), transparent 60%), radial-gradient(ellipse 50% 50% at 10% 90%, rgba(31,90,46,0.1), transparent 60%)' }} />
         {/* Watermark */}
@@ -74,7 +74,7 @@ export default function HomePage() {
         <PageScene config={sceneConfigs.home} />
 
         {/* Hero Content */}
-        <div className="relative z-10 max-w-[1280px] mx-auto px-5 sm:px-[56px] pt-6 sm:pt-8 lg:pt-10 pb-16 sm:pb-20 lg:pb-24">
+        <div className="relative z-10 max-w-[1280px] mx-auto px-5 sm:px-[56px] pt-12 sm:pt-16 lg:pt-20 pb-12 sm:pb-16 lg:pb-20">
           <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.95fr] gap-12 lg:gap-16 items-center">
             {/* Left — Text */}
             <div>
