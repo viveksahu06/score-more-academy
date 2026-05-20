@@ -74,12 +74,12 @@ export default function HomePage() {
         <PageScene config={sceneConfigs.home} />
 
         {/* Hero Content */}
-        <div className="relative z-10 max-w-[1280px] mx-auto px-5 sm:px-[56px] pt-12 sm:pt-16 lg:pt-20 pb-12 sm:pb-16 lg:pb-20">
+        <div className="relative z-10 max-w-[1280px] mx-auto px-5 sm:px-[56px] pt-6 sm:pt-8 lg:pt-10 pb-6 sm:pb-8 lg:pb-10">
           <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.95fr] gap-12 lg:gap-16 items-center">
             {/* Left — Text */}
             <div>
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
-                <span className="inline-flex items-center gap-2.5 px-3.5 py-1.5 border border-blood rounded-full mb-8" style={{ fontFamily: 'var(--mono)', fontSize: '11px', letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--blood)' }}>
+                <span className="inline-flex items-center gap-2.5 px-3.5 py-1.5 border border-blood rounded-full mb-4" style={{ fontFamily: 'var(--mono)', fontSize: '11px', letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--blood)' }}>
                   <span className="w-[7px] h-[7px] rounded-full bg-blood" style={{ animation: 'livepulse 1.6s ease-in-out infinite' }} />
                   Admissions Open · 2025-26
                 </span>
@@ -89,8 +89,8 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="mb-7"
-                style={{ fontFamily: 'var(--display)', fontWeight: 400, fontSize: 'clamp(48px, 9vw, 120px)', lineHeight: 0.88, letterSpacing: '-0.015em', color: 'var(--ink)' }}
+                className="mb-4"
+                style={{ fontFamily: 'var(--display)', fontWeight: 400, fontSize: 'clamp(40px, 6.5vw, 92px)', lineHeight: 0.88, letterSpacing: '-0.015em', color: 'var(--ink)' }}
               >
                 Score More<br />in{' '}
                 <span style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', fontWeight: 400, color: 'var(--saffron-deep)', letterSpacing: '-0.02em' }}>
@@ -98,17 +98,34 @@ export default function HomePage() {
                 </span>
               </motion.h1>
 
-              <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.6 }} className="text-ink-2 text-lg leading-relaxed max-w-[520px] mb-9">
+              <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.6 }} className="text-ink-2 text-md leading-relaxed max-w-[520px] mb-5">
                 Katni&apos;s premier Commerce coaching for Class 11th & 12th. Expert faculty, proven Board results, and the personal attention your child deserves.
               </motion.p>
 
-              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.8 }} className="flex flex-wrap items-center gap-5 mb-12">
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.8 }} className="flex flex-wrap items-center gap-5 mb-6">
                 <Link href="/courses" className="btn-primary">
                   View Courses <span className="arr">→</span>
                 </Link>
                 <a href="tel:+917622422098" className="btn-secondary">
                   Call: 076224 22098
                 </a>
+              </motion.div>
+
+              {/* Stats strip */}
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2, duration: 0.8 }} className="grid grid-cols-4 border-t border-ink/15 pt-4 mt-1">
+                {[
+                  { val: 150, suffix: '+', label: 'Students' },
+                  { val: 91, suffix: '%', label: 'Avg Score' },
+                  { val: 8, suffix: '+', label: 'Years' },
+                  { val: 4, suffix: '', label: 'Batches' },
+                ].map((s) => (
+                  <div key={s.label} className="flex flex-col gap-1 pr-4 border-r border-ink/10 last:border-r-0">
+                    <strong style={{ fontFamily: 'var(--display)', fontSize: 'clamp(20px, 2.5vw, 32px)', fontWeight: 400, lineHeight: 1, color: 'var(--ink)' }}>
+                      <AnimatedCounter target={s.val} suffix={s.suffix} />
+                    </strong>
+                    <span className="text-ink-3 text-[10px] tracking-[0.18em] uppercase" style={{ fontFamily: 'var(--mono)' }}>{s.label}</span>
+                  </div>
+                ))}
               </motion.div>
             </div>
 
