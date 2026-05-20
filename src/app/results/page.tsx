@@ -15,7 +15,7 @@ function FadeIn({ children, className = '', delay = 0 }: { children: React.React
 }
 function Counter({ target, suffix = '' }: { target: number; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-80px' });
+  const isInView = useInView(ref, { once: true });
   const [count, setCount] = useState(0);
   useEffect(() => { if (!isInView) return; let s = 0; const step = target / 100; const t = setInterval(() => { s += step; if (s >= target) { setCount(target); clearInterval(t); } else setCount(Math.floor(s)); }, 16); return () => clearInterval(t); }, [isInView, target]);
   return <span ref={ref}>{count}{suffix}</span>;

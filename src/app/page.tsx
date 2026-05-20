@@ -20,7 +20,7 @@ import { CheckCircleIcon } from '@/components/ui/Icons';
 
 function AnimatedCounter({ target, suffix = '' }: { target: number; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true });
   const [count, setCount] = useState(0);
   useEffect(() => {
     if (!isInView) return;
