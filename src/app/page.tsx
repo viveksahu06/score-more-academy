@@ -130,7 +130,7 @@ export default function HomePage() {
             </div>
 
             {/* Right — Poster Card (editorial style tilted card) */}
-            <motion.div initial={{ opacity: 0, rotate: 0, scale: 0.9 }} animate={{ opacity: 1, rotate: 1.5, scale: 1 }} transition={{ duration: 0.8, delay: 0.5 }} className="hidden lg:block">
+            <motion.div initial={{ opacity: 0, rotate: 0, scale: 0.9 }} animate={{ opacity: 1, rotate: 1.5, scale: 1 }} transition={{ duration: 0.8, delay: 0.5 }} className="block mt-10 lg:mt-0">
               <div className="bg-paper-2 border-[3px] border-ink relative overflow-hidden" style={{ transform: 'rotate(1.5deg)', boxShadow: '12px 12px 0 var(--ink), 12px 12px 0 4px var(--saffron-deep)' }}>
                 {/* Top band */}
                 <div className="bg-saffron-deep text-paper px-5 py-2.5 border-b-2 border-ink flex justify-between" style={{ fontFamily: 'var(--mono)', fontSize: '10.5px', letterSpacing: '0.28em', textTransform: 'uppercase' }}>
