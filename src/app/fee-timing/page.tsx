@@ -38,7 +38,7 @@ export default function FeeTimingPage() {
                   {fee.popular && (
                     <div className="absolute -top-3 -right-3 bg-gold text-ink px-4 py-1.5 border-2 border-ink z-10" style={{ fontFamily: 'var(--mono)', fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600, boxShadow: '3px 3px 0 var(--ink)' }}>Most Popular</div>
                   )}
-                  <div className="p-6 border-b-2 border-ink bg-paper-2">
+                  <div className="p-6 border-b-2 border-ink/30">
                     <h3 style={{ fontFamily: 'var(--display)', fontSize: '20px', lineHeight: 1.1 }}>{fee.courseName}</h3>
                     <div className="mt-4">
                       <span className="text-ink-3 text-sm">Starting at</span>

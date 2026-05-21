@@ -75,7 +75,7 @@ export default function CoursesPage() {
                   {course.popular && (
                     <div className="absolute -top-3 -right-3 bg-gold text-ink px-4 py-1.5 border-2 border-ink z-10" style={{ fontFamily: 'var(--mono)', fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 600, boxShadow: '3px 3px 0 var(--ink)' }}>Most Popular</div>
                   )}
-                  <div className="p-6 pb-4 border-b-2 border-ink bg-paper-2">
+                  <div className="p-6 pb-4 border-b-2 border-ink/30">
                     <span className="text-3xl mb-3 block">{course.icon}</span>
                     <h3 style={{ fontFamily: 'var(--display)', fontSize: '22px', lineHeight: 1.1 }}>{course.title}</h3>
                     <div className="flex flex-wrap gap-2 mt-3">

@@ -51,7 +51,7 @@ export default function ResultsPage() {
               <FadeIn key={st.l}>
                 <div>
                   <div style={{ fontFamily: 'var(--display)', fontSize: '40px', lineHeight: 1, color: 'var(--saffron-2)' }}><Counter target={st.v} suffix={st.s} /></div>
-                  <span className="text-[10px] tracking-[0.18em] uppercase mt-2 block" style={{ fontFamily: 'var(--mono)', color: 'rgba(244,235,215,0.5)' }}>{st.l}</span>
+                  <span className="text-[10px] tracking-[0.18em] uppercase mt-2 block" style={{ fontFamily: 'var(--mono)', color: 'rgba(248,244,233,0.5)' }}>{st.l}</span>
                 </div>
               </FadeIn>
             ))}

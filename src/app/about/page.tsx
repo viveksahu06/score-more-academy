@@ -103,14 +103,14 @@ export default function AboutPage() {
               <h2 className="display-heading on-dark" style={{ fontSize: 'clamp(32px, 4vw, 56px)' }}>Our <em>Journey</em></h2>
             </div>
           </FadeIn>
-          <div className="border-t border-[rgba(244,235,215,0.18)]">
+          <div className="border-t border-[rgba(248,244,233,0.18)]">
             {milestones.map((m, i) => (
               <FadeIn key={m.year} delay={i * 0.06}>
-                <div className="flex gap-8 py-7 border-b border-[rgba(244,235,215,0.18)] hover:bg-[rgba(224,101,30,0.06)] hover:pl-4 transition-all">
+                <div className="flex gap-8 py-7 border-b border-[rgba(248,244,233,0.18)] hover:bg-[rgba(147,80,115,0.08)] hover:pl-4 transition-all">
                   <span className="text-saffron-2 flex-shrink-0 w-[80px]" style={{ fontFamily: 'var(--display)', fontSize: '32px', lineHeight: 1 }}>{m.year}</span>
                   <div>
                     <h3 className="text-paper text-base font-semibold mb-1" style={{ fontFamily: 'var(--condensed)', letterSpacing: '0.05em' }}>{m.title}</h3>
-                    <p className="text-sm" style={{ color: 'rgba(244,235,215,0.65)' }}>{m.desc}</p>
+                    <p className="text-sm" style={{ color: 'rgba(248,244,233,0.65)' }}>{m.desc}</p>
                   </div>
                 </div>
               </FadeIn>
@@ -125,13 +125,13 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <FadeIn>
               <div className="card p-8">
-                <div className="inline-block px-2.5 py-1 bg-paper-2 border border-green text-green mb-4" style={{ fontFamily: 'var(--mono)', fontSize: '10px', letterSpacing: '0.22em', textTransform: 'uppercase' }}>Mission</div>
+                <div className="inline-block px-2.5 py-1 border border-saffron text-saffron mb-4" style={{ fontFamily: 'var(--mono)', fontSize: '10px', letterSpacing: '0.22em', textTransform: 'uppercase' }}>Mission</div>
                 <p className="text-ink-2 text-[15px] leading-relaxed">To provide the highest quality Commerce coaching in Katni with personal attention, expert faculty, and a result-oriented approach.</p>
               </div>
             </FadeIn>
             <FadeIn delay={0.12}>
               <div className="card p-8">
-                <div className="inline-block px-2.5 py-1 bg-paper-2 border border-saffron-deep text-saffron-deep mb-4" style={{ fontFamily: 'var(--mono)', fontSize: '10px', letterSpacing: '0.22em', textTransform: 'uppercase' }}>Vision</div>
+                <div className="inline-block px-2.5 py-1 border border-ink text-ink mb-4" style={{ fontFamily: 'var(--mono)', fontSize: '10px', letterSpacing: '0.22em', textTransform: 'uppercase' }}>Vision</div>
                 <p className="text-ink-2 text-[15px] leading-relaxed">To become the most trusted name in Commerce education in Madhya Pradesh, producing toppers and confident professionals.</p>
               </div>
             </FadeIn>

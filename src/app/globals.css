@@ -1,23 +1,23 @@
 @import "tailwindcss";
 
-/* ===== DESIGN TOKENS — EDITORIAL / WARM PAPER STYLE ===== */
+/* ===== DESIGN TOKENS — VIOLET DUSK PALETTE ===== */
 :root {
-  /* Paper & Ink — warm, sophisticated, never harsh */
-  --paper: #F4EBD7;
-  --paper-2: #EADFC4;
-  --paper-3: #DBCBA5;
-  --ink: #1A1108;
-  --ink-2: #3A2A1C;
-  --ink-3: #6A5440;
+  /* Violet Dusk — deep, sophisticated, premium */
+  --paper: #F8F4E9;
+  --paper-2: #F6DBC0;
+  --paper-3: #E8C9A8;
+  --ink: #502D55;
+  --ink-2: #6B4370;
+  --ink-3: #935073;
 
-  /* Accents — natural, organic, warm earth tones */
-  --saffron: #C4663A;
-  --saffron-2: #D4845E;
-  --saffron-deep: #A04E28;
-  --green: #5B7B5D;
-  --green-2: #6E9670;
-  --blood: #7A3B3B;
-  --gold: #B8922D;
+  /* Accents — violet and warm complementary tones */
+  --saffron: #935073;
+  --saffron-2: #B06E90;
+  --saffron-deep: #502D55;
+  --green: #935073;
+  --green-2: #B06E90;
+  --blood: #502D55;
+  --gold: #F6DBC0;
 
   /* Font Stacks */
   --display: 'Bowlby One', 'Impact', sans-serif;
@@ -29,7 +29,7 @@
   --max: 1280px;
   --gutter: 56px;
 
-  /* Shadows — hard/editorial */
+  /* Shadows — hard/editorial with violet tones */
   --shadow-hard: 6px 6px 0 var(--ink);
   --shadow-hard-sm: 4px 4px 0 var(--ink);
   --shadow-hard-lg: 10px 10px 0 var(--ink);
@@ -89,9 +89,9 @@ body::before {
   inset: 0;
   pointer-events: none;
   z-index: 200;
-  opacity: 0.18;
+  opacity: 0.12;
   mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.08, 0 0 0 0 0.06, 0 0 0 0 0.04, 0 0 0 0.32 0'/></filter><rect width='220' height='220' filter='url(%23n)'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.31, 0 0 0 0 0.18, 0 0 0 0 0.33, 0 0 0 0.25 0'/></filter><rect width='220' height='220' filter='url(%23n)'/></svg>");
 }
 
 a { color: inherit; text-decoration: none; }
@@ -99,7 +99,7 @@ img { display: block; max-width: 100%; }
 
 /* ===== SELECTION ===== */
 ::selection {
-  background: rgba(224, 101, 30, 0.25);
+  background: rgba(147, 80, 115, 0.3);
   color: var(--ink);
 }
 
@@ -124,7 +124,7 @@ img { display: block; max-width: 100%; }
   font-style: italic;
   font-family: 'Georgia', serif;
   font-weight: 400;
-  color: var(--green);
+  color: var(--saffron);
   letter-spacing: -0.01em;
 }
 
@@ -142,7 +142,7 @@ img { display: block; max-width: 100%; }
 
 .display-heading.on-dark em,
 .display-heading.on-dark .accent-italic {
-  color: var(--saffron-2);
+  color: var(--paper-2);
 }
 
 .eyebrow {
@@ -151,12 +151,12 @@ img { display: block; max-width: 100%; }
   font-size: 11px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--saffron-deep);
+  color: var(--saffron);
   margin-bottom: 22px;
 }
 
 .eyebrow.on-dark {
-  color: var(--saffron-2);
+  color: var(--paper-2);
 }
 
 .lead {
@@ -169,7 +169,7 @@ img { display: block; max-width: 100%; }
 }
 
 .lead.on-dark {
-  color: rgba(244, 235, 215, 0.78);
+  color: rgba(248, 244, 233, 0.78);
 }
 
 /* ===== CONTAINER ===== */
@@ -179,12 +179,12 @@ img { display: block; max-width: 100%; }
   padding: 0 var(--gutter);
 }
 
-/* ===== BUTTONS — Editorial / Brutalist ===== */
+/* ===== BUTTONS — Violet Dusk ===== */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   gap: 14px;
-  background: var(--saffron-deep);
+  background: var(--ink);
   color: var(--paper);
   font-family: var(--condensed);
   font-size: 14px;
@@ -201,6 +201,7 @@ img { display: block; max-width: 100%; }
 .btn-primary:hover {
   transform: translate(3px, 3px);
   box-shadow: 3px 3px 0 var(--ink);
+  background: var(--saffron);
 }
 
 .btn-secondary {
@@ -224,8 +225,8 @@ img { display: block; max-width: 100%; }
 }
 
 .btn-secondary:hover {
-  color: var(--saffron-deep);
-  border-bottom-color: var(--saffron-deep);
+  color: var(--saffron);
+  border-bottom-color: var(--saffron);
 }
 
 .btn-pill {
@@ -246,8 +247,8 @@ img { display: block; max-width: 100%; }
 }
 
 .btn-pill:hover {
-  background: var(--saffron-deep);
-  border-color: var(--saffron-deep);
+  background: var(--saffron);
+  border-color: var(--saffron);
   transform: translate(-2px, -2px);
   box-shadow: var(--shadow-hard-sm);
 }
@@ -256,7 +257,7 @@ img { display: block; max-width: 100%; }
   display: inline-flex;
   align-items: center;
   gap: 14px;
-  background: var(--gold);
+  background: var(--paper-2);
   color: var(--ink);
   font-family: var(--condensed);
   font-size: 14px;
@@ -275,9 +276,11 @@ img { display: block; max-width: 100%; }
   box-shadow: 3px 3px 0 var(--ink);
 }
 
-/* ===== CARD — Editorial style ===== */
+/* ===== CARD — Glassmorphism Editorial style ===== */
 .card {
-  background: var(--paper);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 2px solid var(--ink);
   box-shadow: var(--shadow-hard);
   transition: all 0.2s;
@@ -286,17 +289,20 @@ img { display: block; max-width: 100%; }
 .card:hover {
   transform: translate(-2px, -2px);
   box-shadow: 8px 8px 0 var(--ink);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .card-subtle {
-  background: var(--paper-2);
+  background: rgba(80, 45, 85, 0.04);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 2px solid var(--ink);
   box-shadow: var(--shadow-hard-sm);
   transition: all 0.2s;
 }
 
 .card-subtle:hover {
-  background: var(--paper-3);
+  background: rgba(80, 45, 85, 0.08);
   transform: translate(-2px, -2px);
   box-shadow: 6px 6px 0 var(--ink);
 }
@@ -327,7 +333,7 @@ img { display: block; max-width: 100%; }
   left: -200px;
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, var(--saffron-deep), transparent 70%);
+  background: radial-gradient(circle, var(--saffron), transparent 70%);
   opacity: 0.18;
   pointer-events: none;
 }
@@ -339,8 +345,8 @@ img { display: block; max-width: 100%; }
   right: -200px;
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, var(--green), transparent 70%);
-  opacity: 0.18;
+  background: radial-gradient(circle, var(--paper-2), transparent 70%);
+  opacity: 0.12;
   pointer-events: none;
 }
 
@@ -369,7 +375,7 @@ img { display: block; max-width: 100%; }
   50% { opacity: 0.4; transform: scale(0.65); }
 }
 
-/* ===== FORM INPUTS — Editorial ===== */
+/* ===== FORM INPUTS — Violet Dusk ===== */
 input, textarea, select {
   font-size: 16px;
   font-family: var(--sans);
@@ -388,7 +394,7 @@ input, textarea, select {
 
 .input-editorial:focus {
   outline: none;
-  box-shadow: 4px 4px 0 var(--saffron-deep);
+  box-shadow: 4px 4px 0 var(--saffron);
 }
 
 .input-editorial::placeholder {

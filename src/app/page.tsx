@@ -10,7 +10,7 @@ import { testimonials } from '@/lib/data/testimonials';
 const PageScene = dynamic(() => import('@/components/3d/PageScene').then(mod => ({ default: mod.default })), {
   ssr: false,
   loading: () => (
-    <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 60% 50% at 85% 15%, rgba(224,101,30,0.1), transparent 60%), radial-gradient(ellipse 50% 50% at 10% 90%, rgba(31,90,46,0.08), transparent 60%)' }} />
+    <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 60% 50% at 85% 15%, rgba(147,80,115,0.12), transparent 60%), radial-gradient(ellipse 50% 50% at 10% 90%, rgba(80,45,85,0.10), transparent 60%)' }} />
   ),
 });
 
@@ -66,7 +66,7 @@ export default function HomePage() {
       {/* ===== HERO ===== */}
       <section className="relative min-h-[85vh] border-b-[3px] border-ink">
         {/* BG radials */}
-        <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 60% 50% at 85% 15%, rgba(224,101,30,0.12), transparent 60%), radial-gradient(ellipse 50% 50% at 10% 90%, rgba(31,90,46,0.1), transparent 60%)' }} />
+        <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 60% 50% at 85% 15%, rgba(147,80,115,0.14), transparent 60%), radial-gradient(ellipse 50% 50% at 10% 90%, rgba(80,45,85,0.10), transparent 60%)' }} />
         {/* Watermark */}
         <div className="absolute -bottom-[120px] -right-[40px] pointer-events-none select-none opacity-[0.04] leading-[0.8]" style={{ fontFamily: 'var(--display)', fontSize: 'clamp(200px, 40vw, 520px)', color: 'var(--ink)' }}>SM</div>
 
@@ -93,7 +93,7 @@ export default function HomePage() {
                 style={{ fontFamily: 'var(--display)', fontWeight: 400, fontSize: 'clamp(40px, 6.5vw, 92px)', lineHeight: 0.88, letterSpacing: '-0.015em', color: 'var(--ink)' }}
               >
                 Score More<br />in{' '}
-                <span style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', fontWeight: 400, color: 'var(--saffron-deep)', letterSpacing: '-0.02em' }}>
+                <span style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', fontWeight: 400, color: 'var(--saffron)', letterSpacing: '-0.02em' }}>
                   Commerce.
                 </span>
               </motion.h1>
@@ -131,7 +131,7 @@ export default function HomePage() {
 
             {/* Right — Poster Card (editorial style tilted card) */}
             <motion.div initial={{ opacity: 0, rotate: 0, scale: 0.9 }} animate={{ opacity: 1, rotate: 1.5, scale: 1 }} transition={{ duration: 0.8, delay: 0.5 }} className="block mt-10 lg:mt-0">
-              <div className="bg-paper-2 border-[3px] border-ink relative overflow-hidden" style={{ transform: 'rotate(1.5deg)', boxShadow: '12px 12px 0 var(--ink), 12px 12px 0 4px var(--saffron-deep)' }}>
+              <div className="border-[3px] border-ink relative overflow-hidden" style={{ transform: 'rotate(1.5deg)', boxShadow: '12px 12px 0 var(--ink), 12px 12px 0 4px var(--saffron)' }}>
                 {/* Top band */}
                 <div className="bg-saffron-deep text-paper px-5 py-2.5 border-b-2 border-ink flex justify-between" style={{ fontFamily: 'var(--mono)', fontSize: '10.5px', letterSpacing: '0.28em', textTransform: 'uppercase' }}>
                   <span>Score More Academy</span>
@@ -165,7 +165,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== MARQUEE ===== */}
-      <div className="bg-ink text-paper py-5 overflow-hidden border-b-4 border-green" style={{ borderTop: '4px solid var(--saffron)' }}>
+      <div className="bg-ink text-paper py-5 overflow-hidden border-b-4 border-saffron" style={{ borderTop: '4px solid var(--saffron)' }}>
         <div className="marquee-track" style={{ fontFamily: 'var(--display)', fontSize: 'clamp(20px, 3vw, 32px)', letterSpacing: '0.015em' }}>
           {[...Array(2)].map((_, j) => (
             <span key={j} className="flex items-center gap-12">
@@ -205,7 +205,7 @@ export default function HomePage() {
                   )}
 
                   {/* Card header */}
-                  <div className="p-6 pb-4 border-b-2 border-ink bg-paper-2">
+                  <div className="p-6 pb-4 border-b-2 border-ink/30">
                     <span className="text-3xl mb-3 block">{course.icon}</span>
                     <h3 style={{ fontFamily: 'var(--display)', fontSize: '22px', lineHeight: 1.1, color: 'var(--ink)' }}>{course.title}</h3>
                     <div className="flex flex-wrap gap-2 mt-3">
@@ -252,7 +252,7 @@ export default function HomePage() {
             </div>
           </FadeIn>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 max-w-[980px] mx-auto border-t border-[rgba(244,235,215,0.18)]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 max-w-[980px] mx-auto border-t border-[rgba(248,244,233,0.18)]">
             {[
               { num: '01', title: 'Small Batches', desc: 'Limited students per batch. Personal attention guaranteed. No student left behind.' },
               { num: '02', title: 'Expert Faculty', desc: '8-15+ years experienced teachers. Subject matter experts with Board exam mastery.' },
@@ -262,11 +262,11 @@ export default function HomePage() {
               { num: '06', title: 'Study Material', desc: 'Comprehensive notes, curated question banks, and chapter-wise assignments included.' },
             ].map((f, i) => (
               <FadeIn key={f.num} delay={i * 0.08}>
-                <div className="flex gap-6 py-8 px-4 border-b border-[rgba(244,235,215,0.18)] hover:bg-[rgba(224,101,30,0.06)] transition-all hover:pl-6 cursor-default">
+                <div className="flex gap-6 py-8 px-4 border-b border-[rgba(248,244,233,0.18)] hover:bg-[rgba(147,80,115,0.08)] transition-all hover:pl-6 cursor-default">
                   <span className="text-saffron-2 flex-shrink-0" style={{ fontFamily: 'var(--display)', fontSize: '48px', lineHeight: 0.85 }}>{f.num}</span>
                   <div>
                     <h3 className="text-paper text-lg font-semibold mb-1" style={{ fontFamily: 'var(--condensed)', letterSpacing: '0.05em' }}>{f.title}</h3>
-                    <p className="text-sm leading-relaxed" style={{ color: 'rgba(244,235,215,0.7)' }}>{f.desc}</p>
+                    <p className="text-sm leading-relaxed" style={{ color: 'rgba(248,244,233,0.7)' }}>{f.desc}</p>
                   </div>
                 </div>
               </FadeIn>
@@ -347,7 +347,7 @@ export default function HomePage() {
                   <input type="tel" required placeholder="Phone (WhatsApp preferred)" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} className="input-editorial" />
                   <div className="flex gap-3">
                     {['11th', '12th'].map((cls) => (
-                      <button key={cls} type="button" onClick={() => setForm({ ...form, classFor: cls })} className={`flex-1 py-3 border-2 border-ink text-sm font-semibold transition-all ${form.classFor === cls ? 'bg-saffron-deep text-paper shadow-[3px_3px_0_var(--ink)]' : 'bg-paper text-ink hover:bg-paper-2'}`} style={{ fontFamily: 'var(--condensed)', letterSpacing: '0.15em', textTransform: 'uppercase' }}>
+                      <button key={cls} type="button" onClick={() => setForm({ ...form, classFor: cls })} className={`flex-1 py-3 border-2 border-ink text-sm font-semibold transition-all ${form.classFor === cls ? 'bg-ink text-paper shadow-[3px_3px_0_var(--ink)]' : 'bg-paper text-ink hover:bg-paper-2'}`} style={{ fontFamily: 'var(--condensed)', letterSpacing: '0.15em', textTransform: 'uppercase' }}>
                         Class {cls}
                       </button>
                     ))}

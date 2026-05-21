@@ -17,18 +17,18 @@ function FadeIn({ children, className = '', delay = 0 }: { children: React.React
 }
 
 const galleryItems: { id: number; cat: string; Icon: IconComp; caption: string; gradient: string; h: number }[] = [
-  { id: 1, cat: 'Classroom', Icon: BookOpenIcon, caption: 'Interactive Commerce class in session', gradient: 'linear-gradient(135deg, #C4663A33, #B8922D22)', h: 260 },
-  { id: 2, cat: 'Students', Icon: GraduationCapIcon, caption: 'Board exam toppers 2024', gradient: 'linear-gradient(135deg, #5B7B5D33, #6E967022)', h: 320 },
-  { id: 3, cat: 'Events', Icon: CalendarIcon, caption: 'Annual prize distribution ceremony', gradient: 'linear-gradient(135deg, #B8922D33, #C4663A22)', h: 280 },
-  { id: 4, cat: 'Classroom', Icon: PenIcon, caption: 'Mock test preparation session', gradient: 'linear-gradient(135deg, #A04E2833, #C4663A22)', h: 300 },
-  { id: 5, cat: 'Students', Icon: TrophyIcon, caption: 'Students celebrating results day', gradient: 'linear-gradient(135deg, #B8922D33, #5B7B5D22)', h: 240 },
-  { id: 6, cat: 'Events', Icon: BookOpenIcon, caption: 'Parent-teacher meeting 2024', gradient: 'linear-gradient(135deg, #5B7B5D33, #B8922D22)', h: 320 },
-  { id: 7, cat: 'Classroom', Icon: CalculatorIcon, caption: 'Accountancy practical class', gradient: 'linear-gradient(135deg, #C4663A33, #5B7B5D22)', h: 260 },
-  { id: 8, cat: 'Students', Icon: UsersIcon, caption: 'Group study session', gradient: 'linear-gradient(135deg, #7A3B3B22, #B8922D22)', h: 300 },
-  { id: 9, cat: 'Events', Icon: CalendarIcon, caption: 'Orientation day for new batch', gradient: 'linear-gradient(135deg, #6E967033, #C4663A22)', h: 280 },
-  { id: 10, cat: 'Classroom', Icon: LightbulbIcon, caption: 'Doubt clearing session', gradient: 'linear-gradient(135deg, #B8922D33, #A04E2822)', h: 240 },
-  { id: 11, cat: 'Students', Icon: UsersIcon, caption: 'Alumni meet 2024', gradient: 'linear-gradient(135deg, #5B7B5D33, #C4663A22)', h: 310 },
-  { id: 12, cat: 'Events', Icon: TargetIcon, caption: 'Career guidance workshop', gradient: 'linear-gradient(135deg, #C4663A33, #B8922D22)', h: 270 },
+  { id: 1, cat: 'Classroom', Icon: BookOpenIcon, caption: 'Interactive Commerce class in session', gradient: 'linear-gradient(135deg, #93507333, #F6DBC022)', h: 260 },
+  { id: 2, cat: 'Students', Icon: GraduationCapIcon, caption: 'Board exam toppers 2024', gradient: 'linear-gradient(135deg, #502D5533, #B06E9022)', h: 320 },
+  { id: 3, cat: 'Events', Icon: CalendarIcon, caption: 'Annual prize distribution ceremony', gradient: 'linear-gradient(135deg, #F6DBC033, #93507322)', h: 280 },
+  { id: 4, cat: 'Classroom', Icon: PenIcon, caption: 'Mock test preparation session', gradient: 'linear-gradient(135deg, #502D5533, #93507322)', h: 300 },
+  { id: 5, cat: 'Students', Icon: TrophyIcon, caption: 'Students celebrating results day', gradient: 'linear-gradient(135deg, #F6DBC033, #502D5522)', h: 240 },
+  { id: 6, cat: 'Events', Icon: BookOpenIcon, caption: 'Parent-teacher meeting 2024', gradient: 'linear-gradient(135deg, #502D5533, #F6DBC022)', h: 320 },
+  { id: 7, cat: 'Classroom', Icon: CalculatorIcon, caption: 'Accountancy practical class', gradient: 'linear-gradient(135deg, #93507333, #502D5522)', h: 260 },
+  { id: 8, cat: 'Students', Icon: UsersIcon, caption: 'Group study session', gradient: 'linear-gradient(135deg, #502D5522, #F6DBC022)', h: 300 },
+  { id: 9, cat: 'Events', Icon: CalendarIcon, caption: 'Orientation day for new batch', gradient: 'linear-gradient(135deg, #B06E9033, #93507322)', h: 280 },
+  { id: 10, cat: 'Classroom', Icon: LightbulbIcon, caption: 'Doubt clearing session', gradient: 'linear-gradient(135deg, #F6DBC033, #502D5522)', h: 240 },
+  { id: 11, cat: 'Students', Icon: UsersIcon, caption: 'Alumni meet 2024', gradient: 'linear-gradient(135deg, #502D5533, #93507322)', h: 310 },
+  { id: 12, cat: 'Events', Icon: TargetIcon, caption: 'Career guidance workshop', gradient: 'linear-gradient(135deg, #93507333, #F6DBC022)', h: 270 },
 ];
 
 const categories = ['All', 'Classroom', 'Events', 'Students'];
@@ -68,7 +68,7 @@ export default function GalleryPage() {
               <FadeIn key={item.id} delay={i * 0.05}>
                 <div className="card-subtle p-0 overflow-hidden break-inside-avoid cursor-pointer group" onClick={() => setLightbox(item)}>
                   <div className="relative flex items-center justify-center" style={{ background: item.gradient, height: item.h, backgroundSize: 'cover' }}>
-                    <div className="absolute inset-0" style={{ background: 'repeating-linear-gradient(45deg, transparent 0 18px, rgba(26,17,8,0.03) 18px 19px)' }} />
+                    <div className="absolute inset-0" style={{ background: 'repeating-linear-gradient(45deg, transparent 0 18px, rgba(80,45,85,0.03) 18px 19px)' }} />
                     <item.Icon className="w-12 h-12 relative z-10 text-ink/30 group-hover:scale-110 transition-transform duration-300" />
                   </div>
                   <div className="px-4 py-3 border-t-2 border-ink/10 flex justify-between items-center">
@@ -88,7 +88,7 @@ export default function GalleryPage() {
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-[60] bg-ink/80 flex items-center justify-center p-6" onClick={() => setLightbox(null)}>
             <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }} className="card max-w-[600px] w-full p-0 overflow-hidden" onClick={(e) => e.stopPropagation()}>
               <div className="flex items-center justify-center" style={{ background: lightbox.gradient, height: 350 }}>
-                <div className="absolute inset-0" style={{ background: 'repeating-linear-gradient(45deg, transparent 0 18px, rgba(26,17,8,0.03) 18px 19px)' }} />
+                <div className="absolute inset-0" style={{ background: 'repeating-linear-gradient(45deg, transparent 0 18px, rgba(80,45,85,0.03) 18px 19px)' }} />
                 <lightbox.Icon className="w-20 h-20 relative z-10 text-ink/30" />
               </div>
               <div className="p-5 flex justify-between items-center border-t-2 border-ink">

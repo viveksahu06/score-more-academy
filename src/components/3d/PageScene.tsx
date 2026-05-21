@@ -126,8 +126,8 @@ function SceneContent({ config }: { config: SceneConfig }) {
     <>
       <ambientLight intensity={0.5} />
       {(config.lights || [
-        { pos: [10, 10, 10] as [number, number, number], color: '#C4663A', intensity: 0.6 },
-        { pos: [-10, -5, 5] as [number, number, number], color: '#5B7B5D', intensity: 0.4 },
+        { pos: [10, 10, 10] as [number, number, number], color: '#935073', intensity: 0.6 },
+        { pos: [-10, -5, 5] as [number, number, number], color: '#502D55', intensity: 0.4 },
       ]).map((l, i) => (
         <pointLight key={i} position={l.pos} intensity={l.intensity} color={l.color} />
       ))}
@@ -157,129 +157,130 @@ export default function PageScene({ config, className = '' }: { config: SceneCon
   );
 }
 
-/* ---- Updated color palette: Natural Earthy ---- */
-/* Rust/Terracotta #C4663A, Sage #5B7B5D, Warm Brown #6B4226, Honey Gold #B8922D, Deep Clay #8B4B2E */
+/* ---- Updated color palette: Violet Dusk ---- */
+/* Deep Violet #502D55, Mauve #935073, Peach Cream #F6DBC0, Light Violet #6B4370, Rose #B06E90 */
 
 export const sceneConfigs = {
   home: {
-    particleColors: [[0.77, 0.40, 0.23], [0.36, 0.48, 0.36], [0.72, 0.57, 0.18], [0.42, 0.29, 0.15]] as [number, number, number][],
+    particleColors: [[0.58, 0.31, 0.45], [0.31, 0.18, 0.33], [0.96, 0.86, 0.75], [0.42, 0.26, 0.44]] as [number, number, number][],
     particleCount: 400,
     shapes: [
-      { pos: [-3, 0.5, -1.5] as [number, number, number], color: '#C4663A', shape: 'box' as ShapeType, speed: 0.7, scale: 1.4 },
-      { pos: [3, -0.3, -2] as [number, number, number], color: '#5B7B5D', shape: 'box' as ShapeType, speed: 0.5, scale: 1.2 },
-      { pos: [0, 1.5, -2.5] as [number, number, number], color: '#B8922D', shape: 'octahedron' as ShapeType, speed: 0.9, scale: 1.3 },
-      { pos: [-2, -1.2, -1] as [number, number, number], color: '#8B4B2E', shape: 'box' as ShapeType, speed: 0.6, scale: 1.1 },
-      { pos: [2.5, 1, -2] as [number, number, number], color: '#5B7B5D', shape: 'tetrahedron' as ShapeType, speed: 0.8, scale: 1.2 },
+      { pos: [-3, 0.5, -1.5] as [number, number, number], color: '#935073', shape: 'box' as ShapeType, speed: 0.7, scale: 1.4 },
+      { pos: [3, -0.3, -2] as [number, number, number], color: '#502D55', shape: 'box' as ShapeType, speed: 0.5, scale: 1.2 },
+      { pos: [0, 1.5, -2.5] as [number, number, number], color: '#F6DBC0', shape: 'octahedron' as ShapeType, speed: 0.9, scale: 1.3 },
+      { pos: [-2, -1.2, -1] as [number, number, number], color: '#6B4370', shape: 'box' as ShapeType, speed: 0.6, scale: 1.1 },
+      { pos: [2.5, 1, -2] as [number, number, number], color: '#502D55', shape: 'tetrahedron' as ShapeType, speed: 0.8, scale: 1.2 },
     ],
     rings: [
-      { pos: [-1, 0.3, -2] as [number, number, number], color: '#B8922D', speed: 0.3, radius: 1.5 },
-      { pos: [2, -0.8, -1.5] as [number, number, number], color: '#C4663A', speed: 0.4, radius: 1.0 },
+      { pos: [-1, 0.3, -2] as [number, number, number], color: '#F6DBC0', speed: 0.3, radius: 1.5 },
+      { pos: [2, -0.8, -1.5] as [number, number, number], color: '#935073', speed: 0.4, radius: 1.0 },
     ],
   } as SceneConfig,
 
   about: {
-    particleColors: [[0.56, 0.35, 0.12], [0.36, 0.48, 0.36], [0.72, 0.57, 0.18]] as [number, number, number][],
+    particleColors: [[0.42, 0.26, 0.44], [0.31, 0.18, 0.33], [0.96, 0.86, 0.75]] as [number, number, number][],
     particleCount: 300,
     shapes: [
-      { pos: [-3, 1, -1.5] as [number, number, number], color: '#8B4B2E', shape: 'dodecahedron' as ShapeType, speed: 0.5, scale: 1.5 },
-      { pos: [3, -0.3, -2] as [number, number, number], color: '#5B7B5D', shape: 'icosahedron' as ShapeType, speed: 0.6, scale: 1.4 },
-      { pos: [0, -1, -1] as [number, number, number], color: '#B8922D', shape: 'sphere' as ShapeType, speed: 0.4, scale: 1.6 },
-      { pos: [-1.5, 0, -2.5] as [number, number, number], color: '#C4663A', shape: 'octahedron' as ShapeType, speed: 0.7, scale: 1.3 },
-      { pos: [2, 1.5, -1] as [number, number, number], color: '#6B4226', shape: 'tetrahedron' as ShapeType, speed: 0.5, scale: 1.2 },
+      { pos: [-3, 1, -1.5] as [number, number, number], color: '#6B4370', shape: 'dodecahedron' as ShapeType, speed: 0.5, scale: 1.5 },
+      { pos: [3, -0.3, -2] as [number, number, number], color: '#502D55', shape: 'icosahedron' as ShapeType, speed: 0.6, scale: 1.4 },
+      { pos: [0, -1, -1] as [number, number, number], color: '#F6DBC0', shape: 'sphere' as ShapeType, speed: 0.4, scale: 1.6 },
+      { pos: [-1.5, 0, -2.5] as [number, number, number], color: '#935073', shape: 'octahedron' as ShapeType, speed: 0.7, scale: 1.3 },
+      { pos: [2, 1.5, -1] as [number, number, number], color: '#B06E90', shape: 'tetrahedron' as ShapeType, speed: 0.5, scale: 1.2 },
     ],
     rings: [
-      { pos: [1, 0.5, -2] as [number, number, number], color: '#8B4B2E', speed: 0.25, radius: 1.8 },
-      { pos: [-2, -0.5, -1.5] as [number, number, number], color: '#B8922D', speed: 0.35, radius: 1.2 },
+      { pos: [1, 0.5, -2] as [number, number, number], color: '#6B4370', speed: 0.25, radius: 1.8 },
+      { pos: [-2, -0.5, -1.5] as [number, number, number], color: '#F6DBC0', speed: 0.35, radius: 1.2 },
     ],
   } as SceneConfig,
 
   courses: {
-    particleColors: [[0.77, 0.40, 0.23], [0.36, 0.48, 0.36], [0.72, 0.57, 0.18]] as [number, number, number][],
+    particleColors: [[0.58, 0.31, 0.45], [0.31, 0.18, 0.33], [0.96, 0.86, 0.75]] as [number, number, number][],
     particleCount: 320,
     shapes: [
-      { pos: [-3, 0.5, -1] as [number, number, number], color: '#C4663A', shape: 'box' as ShapeType, speed: 0.6, scale: 1.6 },
-      { pos: [3.5, -0.3, -2] as [number, number, number], color: '#5B7B5D', shape: 'box' as ShapeType, speed: 0.4, scale: 1.4 },
-      { pos: [0.5, 1.5, -2.5] as [number, number, number], color: '#B8922D', shape: 'box' as ShapeType, speed: 0.8, scale: 1.2 },
-      { pos: [-2, -0.8, -1.5] as [number, number, number], color: '#5B7B5D', shape: 'tetrahedron' as ShapeType, speed: 0.7, scale: 1.3 },
-      { pos: [2, 1, -1] as [number, number, number], color: '#8B4B2E', shape: 'cone' as ShapeType, speed: 0.5, scale: 1.3 },
+      { pos: [-3, 0.5, -1] as [number, number, number], color: '#935073', shape: 'box' as ShapeType, speed: 0.6, scale: 1.6 },
+      { pos: [3.5, -0.3, -2] as [number, number, number], color: '#502D55', shape: 'box' as ShapeType, speed: 0.4, scale: 1.4 },
+      { pos: [0.5, 1.5, -2.5] as [number, number, number], color: '#F6DBC0', shape: 'box' as ShapeType, speed: 0.8, scale: 1.2 },
+      { pos: [-2, -0.8, -1.5] as [number, number, number], color: '#502D55', shape: 'tetrahedron' as ShapeType, speed: 0.7, scale: 1.3 },
+      { pos: [2, 1, -1] as [number, number, number], color: '#6B4370', shape: 'cone' as ShapeType, speed: 0.5, scale: 1.3 },
     ],
     rings: [
-      { pos: [-0.5, 0, -2] as [number, number, number], color: '#C4663A', speed: 0.3, radius: 1.4 },
+      { pos: [-0.5, 0, -2] as [number, number, number], color: '#935073', speed: 0.3, radius: 1.4 },
     ],
   } as SceneConfig,
 
   results: {
-    particleColors: [[0.72, 0.57, 0.18], [0.77, 0.40, 0.23], [0.56, 0.35, 0.12]] as [number, number, number][],
+    particleColors: [[0.96, 0.86, 0.75], [0.58, 0.31, 0.45], [0.42, 0.26, 0.44]] as [number, number, number][],
     particleCount: 350,
     shapes: [
-      { pos: [-3, 0.8, -1] as [number, number, number], color: '#B8922D', shape: 'octahedron' as ShapeType, speed: 0.6, scale: 1.7 },
-      { pos: [3, -0.3, -2] as [number, number, number], color: '#B8922D', shape: 'icosahedron' as ShapeType, speed: 0.5, scale: 1.5 },
-      { pos: [0, 1.5, -2.5] as [number, number, number], color: '#C4663A', shape: 'dodecahedron' as ShapeType, speed: 0.7, scale: 1.3 },
-      { pos: [-2, -1, -1.5] as [number, number, number], color: '#B8922D', shape: 'sphere' as ShapeType, speed: 0.8, scale: 1.2 },
-      { pos: [2.5, 1, -1] as [number, number, number], color: '#8B4B2E', shape: 'tetrahedron' as ShapeType, speed: 0.4, scale: 1.4 },
+      { pos: [-3, 0.8, -1] as [number, number, number], color: '#F6DBC0', shape: 'octahedron' as ShapeType, speed: 0.6, scale: 1.7 },
+      { pos: [3, -0.3, -2] as [number, number, number], color: '#F6DBC0', shape: 'icosahedron' as ShapeType, speed: 0.5, scale: 1.5 },
+      { pos: [0, 1.5, -2.5] as [number, number, number], color: '#935073', shape: 'dodecahedron' as ShapeType, speed: 0.7, scale: 1.3 },
+      { pos: [-2, -1, -1.5] as [number, number, number], color: '#F6DBC0', shape: 'sphere' as ShapeType, speed: 0.8, scale: 1.2 },
+      { pos: [2.5, 1, -1] as [number, number, number], color: '#6B4370', shape: 'tetrahedron' as ShapeType, speed: 0.4, scale: 1.4 },
     ],
     rings: [
-      { pos: [0, 0, -2] as [number, number, number], color: '#B8922D', speed: 0.2, radius: 2.2 },
-      { pos: [-2, 0.8, -1] as [number, number, number], color: '#C4663A', speed: 0.35, radius: 1.0 },
+      { pos: [0, 0, -2] as [number, number, number], color: '#F6DBC0', speed: 0.2, radius: 2.2 },
+      { pos: [-2, 0.8, -1] as [number, number, number], color: '#935073', speed: 0.35, radius: 1.0 },
     ],
   } as SceneConfig,
 
   feeTiming: {
-    particleColors: [[0.36, 0.48, 0.36], [0.72, 0.57, 0.18], [0.42, 0.29, 0.15]] as [number, number, number][],
+    particleColors: [[0.31, 0.18, 0.33], [0.96, 0.86, 0.75], [0.42, 0.26, 0.44]] as [number, number, number][],
     particleCount: 280,
     shapes: [
-      { pos: [-3, 0.3, -1] as [number, number, number], color: '#B8922D', shape: 'sphere' as ShapeType, speed: 0.5, scale: 1.5 },
-      { pos: [3, 0.8, -2] as [number, number, number], color: '#5B7B5D', shape: 'torus' as ShapeType, speed: 0.6, scale: 1.4 },
-      { pos: [0, -0.8, -2.5] as [number, number, number], color: '#B8922D', shape: 'dodecahedron' as ShapeType, speed: 0.4, scale: 1.4 },
-      { pos: [-2, 1.2, -1.5] as [number, number, number], color: '#C4663A', shape: 'octahedron' as ShapeType, speed: 0.7, scale: 1.3 },
+      { pos: [-3, 0.3, -1] as [number, number, number], color: '#F6DBC0', shape: 'sphere' as ShapeType, speed: 0.5, scale: 1.5 },
+      { pos: [3, 0.8, -2] as [number, number, number], color: '#502D55', shape: 'torus' as ShapeType, speed: 0.6, scale: 1.4 },
+      { pos: [0, -0.8, -2.5] as [number, number, number], color: '#F6DBC0', shape: 'dodecahedron' as ShapeType, speed: 0.4, scale: 1.4 },
+      { pos: [-2, 1.2, -1.5] as [number, number, number], color: '#935073', shape: 'octahedron' as ShapeType, speed: 0.7, scale: 1.3 },
     ],
     rings: [
-      { pos: [1, -0.3, -1.5] as [number, number, number], color: '#5B7B5D', speed: 0.3, radius: 1.5 },
+      { pos: [1, -0.3, -1.5] as [number, number, number], color: '#502D55', speed: 0.3, radius: 1.5 },
     ],
   } as SceneConfig,
 
   gallery: {
-    particleColors: [[0.77, 0.40, 0.23], [0.36, 0.48, 0.36], [0.72, 0.57, 0.18], [0.56, 0.35, 0.12]] as [number, number, number][],
+    particleColors: [[0.58, 0.31, 0.45], [0.31, 0.18, 0.33], [0.96, 0.86, 0.75], [0.42, 0.26, 0.44]] as [number, number, number][],
     particleCount: 300,
     shapes: [
-      { pos: [-3, 0.8, -1] as [number, number, number], color: '#C4663A', shape: 'box' as ShapeType, speed: 0.5, scale: 1.7 },
-      { pos: [3, -0.3, -2] as [number, number, number], color: '#5B7B5D', shape: 'box' as ShapeType, speed: 0.4, scale: 1.5 },
-      { pos: [0, 1.5, -2.5] as [number, number, number], color: '#B8922D', shape: 'box' as ShapeType, speed: 0.7, scale: 1.3 },
-      { pos: [-1.5, -1, -1.5] as [number, number, number], color: '#8B4B2E', shape: 'box' as ShapeType, speed: 0.6, scale: 1.1 },
+      { pos: [-3, 0.8, -1] as [number, number, number], color: '#935073', shape: 'box' as ShapeType, speed: 0.5, scale: 1.7 },
+      { pos: [3, -0.3, -2] as [number, number, number], color: '#502D55', shape: 'box' as ShapeType, speed: 0.4, scale: 1.5 },
+      { pos: [0, 1.5, -2.5] as [number, number, number], color: '#F6DBC0', shape: 'box' as ShapeType, speed: 0.7, scale: 1.3 },
+      { pos: [-1.5, -1, -1.5] as [number, number, number], color: '#6B4370', shape: 'box' as ShapeType, speed: 0.6, scale: 1.1 },
     ],
     rings: [
-      { pos: [1.5, 0.3, -1.5] as [number, number, number], color: '#B8922D', speed: 0.3, radius: 1.3 },
-      { pos: [-1, -0.5, -1] as [number, number, number], color: '#C4663A', speed: 0.25, radius: 0.9 },
+      { pos: [1.5, 0.3, -1.5] as [number, number, number], color: '#F6DBC0', speed: 0.3, radius: 1.3 },
+      { pos: [-1, -0.5, -1] as [number, number, number], color: '#935073', speed: 0.25, radius: 0.9 },
     ],
   } as SceneConfig,
 
   inquiry: {
-    particleColors: [[0.36, 0.48, 0.36], [0.42, 0.56, 0.42], [0.42, 0.29, 0.15]] as [number, number, number][],
+    particleColors: [[0.31, 0.18, 0.33], [0.42, 0.35, 0.44], [0.42, 0.26, 0.44]] as [number, number, number][],
     particleCount: 260,
     shapes: [
-      { pos: [-3, 0.8, -1] as [number, number, number], color: '#5B7B5D', shape: 'cone' as ShapeType, speed: 0.5, scale: 1.5 },
-      { pos: [3, -0.3, -2] as [number, number, number], color: '#C4663A', shape: 'tetrahedron' as ShapeType, speed: 0.6, scale: 1.4 },
-      { pos: [0, 1.5, -2.5] as [number, number, number], color: '#5B7B5D', shape: 'icosahedron' as ShapeType, speed: 0.4, scale: 1.3 },
-      { pos: [-1.5, -0.8, -1.5] as [number, number, number], color: '#B8922D', shape: 'octahedron' as ShapeType, speed: 0.7, scale: 1.2 },
+      { pos: [-3, 0.8, -1] as [number, number, number], color: '#502D55', shape: 'cone' as ShapeType, speed: 0.5, scale: 1.5 },
+      { pos: [3, -0.3, -2] as [number, number, number], color: '#935073', shape: 'tetrahedron' as ShapeType, speed: 0.6, scale: 1.4 },
+      { pos: [0, 1.5, -2.5] as [number, number, number], color: '#502D55', shape: 'icosahedron' as ShapeType, speed: 0.4, scale: 1.3 },
+      { pos: [-1.5, -0.8, -1.5] as [number, number, number], color: '#F6DBC0', shape: 'octahedron' as ShapeType, speed: 0.7, scale: 1.2 },
     ],
     rings: [
-      { pos: [-1, 0, -1.5] as [number, number, number], color: '#5B7B5D', speed: 0.2, radius: 1.6 },
-      { pos: [2, 0.5, -1] as [number, number, number], color: '#B8922D', speed: 0.3, radius: 1.0 },
+      { pos: [-1, 0, -1.5] as [number, number, number], color: '#502D55', speed: 0.2, radius: 1.6 },
+      { pos: [2, 0.5, -1] as [number, number, number], color: '#F6DBC0', speed: 0.3, radius: 1.0 },
     ],
   } as SceneConfig,
 
   contact: {
-    particleColors: [[0.77, 0.40, 0.23], [0.56, 0.35, 0.12], [0.72, 0.57, 0.18]] as [number, number, number][],
+    particleColors: [[0.58, 0.31, 0.45], [0.42, 0.26, 0.44], [0.96, 0.86, 0.75]] as [number, number, number][],
     particleCount: 280,
     shapes: [
-      { pos: [-3, 0.3, -1] as [number, number, number], color: '#C4663A', shape: 'sphere' as ShapeType, speed: 0.5, scale: 1.4 },
-      { pos: [3, 0.8, -2] as [number, number, number], color: '#8B4B2E', shape: 'torus' as ShapeType, speed: 0.6, scale: 1.5 },
-      { pos: [0, -0.8, -2.5] as [number, number, number], color: '#B8922D', shape: 'dodecahedron' as ShapeType, speed: 0.4, scale: 1.3 },
-      { pos: [-2, 1.2, -1.5] as [number, number, number], color: '#5B7B5D', shape: 'octahedron' as ShapeType, speed: 0.7, scale: 1.4 },
+      { pos: [-3, 0.3, -1] as [number, number, number], color: '#935073', shape: 'sphere' as ShapeType, speed: 0.5, scale: 1.4 },
+      { pos: [3, 0.8, -2] as [number, number, number], color: '#6B4370', shape: 'torus' as ShapeType, speed: 0.6, scale: 1.5 },
+      { pos: [0, -0.8, -2.5] as [number, number, number], color: '#F6DBC0', shape: 'dodecahedron' as ShapeType, speed: 0.4, scale: 1.3 },
+      { pos: [-2, 1.2, -1.5] as [number, number, number], color: '#502D55', shape: 'octahedron' as ShapeType, speed: 0.7, scale: 1.4 },
     ],
     rings: [
-      { pos: [1, -0.3, -1] as [number, number, number], color: '#C4663A', speed: 0.25, radius: 1.3 },
-      { pos: [-1.5, 0.5, -2] as [number, number, number], color: '#B8922D', speed: 0.3, radius: 1.6 },
+      { pos: [1, -0.3, -1] as [number, number, number], color: '#935073', speed: 0.25, radius: 1.3 },
+      { pos: [-1.5, 0.5, -2] as [number, number, number], color: '#F6DBC0', speed: 0.3, radius: 1.6 },
     ],
   } as SceneConfig,
 };
+

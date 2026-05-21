@@ -61,7 +61,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=JetBrains+Mono:wght@400;500;600&display=swap"
           rel="stylesheet"
         />
-        <meta name="theme-color" content="#F4EBD7" />
+        <meta name="theme-color" content="#F8F4E9" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

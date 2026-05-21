@@ -72,7 +72,7 @@ export default function InquiryPage() {
                       <label className="block text-ink-2 text-sm font-medium mb-2">Class Applying For <span className="text-saffron-deep">*</span></label>
                       <div className="flex gap-3">
                         {['11th', '12th'].map((cls) => (
-                          <button key={cls} type="button" onClick={() => setForm({ ...form, classApplying: cls })} className={`flex-1 py-3 border-2 border-ink text-sm font-semibold transition-all ${form.classApplying === cls ? 'bg-saffron-deep text-paper shadow-[3px_3px_0_var(--ink)]' : 'bg-paper text-ink hover:bg-paper-2'}`} style={{ fontFamily: 'var(--condensed)', letterSpacing: '0.15em', textTransform: 'uppercase' }}>
+                          <button key={cls} type="button" onClick={() => setForm({ ...form, classApplying: cls })} className={`flex-1 py-3 border-2 border-ink text-sm font-semibold transition-all ${form.classApplying === cls ? 'bg-ink text-paper shadow-[3px_3px_0_var(--ink)]' : 'bg-paper text-ink hover:bg-paper-2'}`} style={{ fontFamily: 'var(--condensed)', letterSpacing: '0.15em', textTransform: 'uppercase' }}>
                             Class {cls}
                           </button>
                         ))}
